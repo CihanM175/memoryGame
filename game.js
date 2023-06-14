@@ -1,4 +1,4 @@
-let cards = document.querySelectorAll('.catCards')
+let cards = document.querySelectorAll('.cats')
 function flipCard(){
     this.classList.toggle('flip')
 }

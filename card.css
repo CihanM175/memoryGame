@@ -30,6 +30,9 @@ flex-wrap: wrap;
     transform: scale(.90);
     transition: transform .2s;
 }
+.cats.flip{
+transform: rotateY(180deg);
+}
 
 .front-face, 
 .back-face {
