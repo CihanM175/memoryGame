@@ -17,6 +17,7 @@ height: 700px;
 margin: auto;
 display: flex;
 flex-wrap: wrap;
+perspective: 1000px;
 }
 .cats{
     width: calc(25% - 10px);
@@ -24,6 +25,8 @@ flex-wrap: wrap;
     margin: 5px;
     position: relative;
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 
 }
 .cats:active{
@@ -42,4 +45,9 @@ padding: 11px;
 position: absolute;
 border-radius: 5px;
 background-color: wheat;
+backface-visibility: hidden;
+}
+
+.front-face{
+    transform: rotateY(180deg);
 }
