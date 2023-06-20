@@ -4,12 +4,34 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 	<title> Cat Memory Game</title>
 	<link rel="stylesheet" href="card.css">
 	<script src="game.js" defer></script>
 </head>
 <body>
-  <h1>Cat MEME-ory Game</h1>
+  <h1 id="header">Cat MEME-ory Game</h1>
+  <!-- Timer -->
+<p><span id="timer">00:30</span></p>
+<h2>  <!-- Start button -->
+  <button id="startButton">Start Game</button></h2>
+<!-- Add a modal container to the body -->
+<div id="game-over-modal" class="modal">
+  <div class="modal-content">
+    <h2>Game Over!</h2>
+    <p>Your game has ended.</p>
+    <button id="restartButton">Restart</button>
+  </div>
+</div>
+<div id="you-win-modal" class="modal">
+  <div class="modal-content">
+    <h2>You Win!</h2>
+    <p>Congratulations! You have matched all the cards.</p>
+    <button id="play-again-button">Play Again</button>
+  </div>
+</div>
 <!-- all the cards for the memory game -->
 	<section class="catCards" >
   <div class="cats" data-framework="wut">
@@ -60,7 +82,6 @@
     <img class="front-face" src="img/whodisCat.JPG" alt="whodisCat"/>
     <img class = "back-face" src="img/blackLoaf.JPG" alt="blackLoaf" />
   </div>
-  
 </section>
 </body>
 </html>
