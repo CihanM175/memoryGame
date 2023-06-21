@@ -3,7 +3,6 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-
 function flipCard(){
     if(lockBoard) return;
    if (this === firstCard) return;
@@ -26,6 +25,7 @@ function checkForMatch(){
     let isMatch = firstCard.dataset.framework === 
     secondCard.dataset.framework;
     
+
     isMatch ? cancelCards() : unflipCards();
 }
    
@@ -35,6 +35,8 @@ function cancelCards(){
      firstCard.removeEventListener('click', flipCard)
         secondCard.removeEventListener('click', flipCard)
         resetBoard();
+        // calling the WinCON here
+        checkWinCondition();
 }
 
 
@@ -150,20 +152,34 @@ restartButton.addEventListener('click', function() {
    resetGame();
   });
 // You win modal
-  const youWinModal = document.getElementById('you-win-modal');
+const youWinModal = document.getElementById('you-win-modal');
 
 function showYouWinModal() {
   youWinModal.style.display = 'flex';
 }
+
 function hideYouWinModal() {
-    youWinModal.style.display = 'none';
+  youWinModal.style.display = 'none';
+}
+
+function checkWinCondition() {
+  let allFlipped = true;
+  cards.forEach((card) => {
+    if (!card.classList.contains('flip')) {
+      allFlipped = false;
+    }
+  });
+
+  if (allFlipped) {
+    stopTimer();
+    showYouWinModal();
   }
-  
+}
 
-
-
-
-
-
+//restart game also with play again button
+playAgainButton.addEventListener('click', function(){
+    hideYouWinModal();
+    resetGame();
+})
 
 cards.forEach (card => card.addEventListener('click',flipCard))

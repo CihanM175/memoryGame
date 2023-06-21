@@ -1,1 +1,37 @@
-https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1151s&ab_channel=freeCodeCamp.org
+
+Title:Memory Card Game - JavaScript Tutorial
+Ferreira.M(2018) [ 
+    //Javascript
+    function flipCard()
+    if(lockBoard) return;
+   if (this === firstCard) return;
+
+
+function checkForMatch(){
+    let isMatch = firstCard.dataset.framework === 
+    secondCard.dataset.framework;
+    
+
+    isMatch ? cancelCards() : unflipCards();
+}
+
+
+//Css
+
+.front-face, 
+.back-face {
+width: 160px;
+height: 200px;
+padding: 11px;
+position: absolute;
+border-radius: 5px;
+background-color: wheat;
+backface-visibility: hidden;
+}]
+
+Availability:(https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1151s&ab_channel=freeCodeCamp.org)
+    https://github.com/code-sketch/memory-game
+
+
+
+Google Fonts
